@@ -1,0 +1,24 @@
+{
+  "name": "porous",
+  "version": "1.0.0",
+  "description": "A Node HTTP proxy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisnewtn/porous.git"
+  },
+  "keywords": [
+    "node",
+    "http",
+    "proxy"
+  ],
+  "author": "Chris Newton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisnewtn/porous/issues"
+  },
+  "homepage": "https://github.com/chrisnewtn/porous"
+}
