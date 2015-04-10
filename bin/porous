@@ -4,4 +4,6 @@ var porous = require('../index');
 
 var proxy = porous();
 
+proxy.use(require('../lib/middleware/exampleMiddleware'));
+
 proxy.listen();
