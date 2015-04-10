@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A Node HTTP proxy",
   "main": "index.js",
+  "bin": "./bin/porous",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/chrisnewtn/porous/issues"
   },
-  "homepage": "https://github.com/chrisnewtn/porous"
+  "homepage": "https://github.com/chrisnewtn/porous",
+  "dependencies": {
+    "object-assign": "^2.0.0"
+  }
 }

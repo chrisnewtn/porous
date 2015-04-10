@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var porous = require('../index');
+
+var proxy = porous();
+
+proxy.listen();
