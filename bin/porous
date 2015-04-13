@@ -19,6 +19,7 @@ if (cluster.isMaster) {
   var proxy = porous();
 
   proxy.use(require('../lib/rules/cookieCutter'));
+  proxy.use(require('../lib/rules/adAway'));
 
   proxy.listen();
 }
