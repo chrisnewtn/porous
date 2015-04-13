@@ -1,9 +1,24 @@
 #!/usr/bin/env node
 
+'use strict';
+
 var porous = require('../index');
+var cluster = require('cluster');
+var numCPUs = require('os').cpus().length;
 
-var proxy = porous();
+if (cluster.isMaster) {
+  // Fork workers.
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
 
-proxy.use(require('../lib/rules/cookieCutter'));
+  cluster.on('exit', function(worker) {
+    console.log('worker ' + worker.process.pid + ' died');
+  });
+} else {
+  var proxy = porous();
 
-proxy.listen();
+  proxy.use(require('../lib/rules/cookieCutter'));
+
+  proxy.listen();
+}
